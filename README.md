@@ -47,6 +47,9 @@ Any suggestion and feedback is welcome. You can message me on
 * **Authentication:** JWT (JSON Web Tokens)
 * **Deployment:** Vercel
 
+* ### SELLER LOGIN EMAIL/PASSWORD
+* 
+
 #### **Live Links:**
 https://jhola-groceries-client.vercel.app/
 
