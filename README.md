@@ -49,7 +49,8 @@ Any suggestion and feedback is welcome. You can message me on
 
 * **Database:** ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
 
-* **Authentication:** JWT (JSON Web Tokens)
+* **Authentication:** ![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=json-web-tokens&logoColor=white)
+
 * **Deployment:** Vercel
 
 * ### SELLER LOGIN EMAIL/PASSWORD
