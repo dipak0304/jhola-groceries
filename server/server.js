@@ -20,8 +20,8 @@ await connectCloudinary();
 
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://jhola-groceries-client.vercel.app/",
-];
+  "https://jhola-groceries-client.vercel.app
+]
 
 app.post("/stripe", express.raw({ type: "application/json" }), stripeWebhooks);
 
