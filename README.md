@@ -23,6 +23,10 @@ Any suggestion and feedback is welcome. You can message me on
 ![login snap](https://github.com/dipak0304/jhola-groceries/blob/main/pages-img/user.png?raw=true)
 
 
+### Cart
+![cart snap](https://github.com/dipak0304/jhola-groceries/blob/main/pages-img/user.png?raw=true)
+
+
 
 #### **Key Features:**
 
