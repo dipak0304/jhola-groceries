@@ -30,8 +30,6 @@ Any suggestion and feedback is welcome. You can message me on
 * **Deployment:** Vercel
 
 #### **Live Links:**
-
-* **Frontend:** [https://greatstack-frontend-iota.vercel.app/](https://greatstack-frontend-iota.vercel.app/)
-* **Backend:** [https://greatstack-backend.vercel.app/](https://greatstack-backend.vercel.app/)
+https://jhola-groceries-client.vercel.app/
 
 
