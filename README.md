@@ -17,7 +17,7 @@ Any suggestion and feedback is welcome. You can message me on
 
 ## screenshots
 ### Homepage
-![homepage snap](https://github.com/dipak0304/Hospitalmanagement-system/blob/main/static/screenshots/homepage.png?raw=true)
+![homepage snap](https://github.com/dipak0304/jhola-groceries/blob/main/pages-img/homepage.png?raw=true)
 
 #### **Key Features:**
 
