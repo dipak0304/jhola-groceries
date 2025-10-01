@@ -41,7 +41,8 @@ Any suggestion and feedback is welcome. You can message me on
 
 #### **Tech Stack:**
 
-* **Frontend:** React
+* **Frontend:** ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+
 * **Backend:** Node.js, Express
 * **Database:** MongoDB
 * **Authentication:** JWT (JSON Web Tokens)
@@ -61,14 +62,14 @@ If someone wants to run locally:
 # Clone repo
 git clone [https://github.com/dipak0304/groceries](https://github.com/dipak0304/jhola-groceries).git
 
-# Backend
+## Backend
 cd groceries-server
 
 npm install
 
 npm run dev
 
-# Frontend
+## Frontend
 cd ../groceries-client
 
 npm install
