@@ -20,7 +20,7 @@ Any suggestion and feedback is welcome. You can message me on
 ![homepage snap](https://github.com/dipak0304/jhola-groceries/blob/main/pages-img/homepage.png?raw=true)
 
 ### User Login
-![login snap](https://github.com/dipak0304/jhola-groceries/blob/main/pages-img/homepage.png?raw=true)
+![login snap](https://github.com/dipak0304/jhola-groceries/blob/main/pages-img/user.png?raw=true)
 
 
 
