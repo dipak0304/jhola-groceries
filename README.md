@@ -7,6 +7,8 @@ A Grocery Delivery Web Application built with the MERN stack (MongoDB, Express, 
 
 ![developer](https://img.shields.io/badge/Developed%20By%20%3A-Dipak%20Bohara-red)
 
+![Developer](https://img.shields.io/badge/Developer-Dipak%20Bohara-blue)
+
 
 
 ## Social Media
