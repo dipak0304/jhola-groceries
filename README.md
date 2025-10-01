@@ -54,7 +54,7 @@ https://jhola-groceries-client.vercel.app/
 
 If someone wants to run locally:
 # Clone repo
-git clone https://github.com/dipak0304/groceries.git
+git clone [https://github.com/dipak0304/groceries](https://github.com/dipak0304/jhola-groceries).git
 
 # Backend
 cd groceries-server
