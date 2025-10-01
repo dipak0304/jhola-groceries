@@ -40,10 +40,14 @@ git clone https://github.com/dipak0304/groceries.git
 
 # Backend
 cd groceries-server
+
 npm install
+
 npm run dev
 
 # Frontend
 cd ../groceries-client
+
 npm install
+
 npm run dev
