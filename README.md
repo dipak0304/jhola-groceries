@@ -92,3 +92,7 @@ npm run dev
 * Multi-seller marketplace
 
 * Dark mode, better UI/UX
+
+  ## 🔟 Contact / Feedback
+
+* Encourage users to reach out for suggestions, bugs, or feature requests.
