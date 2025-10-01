@@ -50,7 +50,7 @@ Any suggestion and feedback is welcome. You can message me on
 * ### SELLER LOGIN EMAIL/PASSWORD
 * #### Email:  admin@example.com
 * #### Password: admin123
-* 
+  
 
 #### **Live Links:**
 https://jhola-groceries-client.vercel.app/
