@@ -82,6 +82,67 @@ npm install
 
 npm run dev
 
+### 🤝 Contribution Guidelines
+
+Thank you for considering contributing to the Jhola Groceries project! We welcome contributions of any kind – whether it’s fixing bugs, adding features, improving documentation, or giving feedback.
+
+#### How to Contribute
+
+##### 1. Fork the repository
+* Click the “Fork” button at the top right of the repository to create your own copy.
+
+##### Clone your fork
+
+git clone https://github.com/your-username/jhola-groceries.git
+cd jhola-groceries
+
+
+##### Create a new branch
+
+git checkout -b feature/your-feature-name
+
+
+##### Make changes
+
+* Follow the existing code style.
+
+* Add meaningful comments and documentation.
+
+* Update the README if necessary.
+
+##### Commit your changes
+
+git add .
+git commit -m "Add your meaningful commit message"
+
+
+##### Push your branch
+
+git push origin feature/your-feature-name
+
+
+##### Open a Pull Request (PR)
+
+* Go to the original repository and open a PR from your branch.
+
+* Describe the changes clearly and reference any related issues.
+
+##### Code of Conduct
+
+* Be respectful and constructive.
+
+* Report any bugs or issues in a polite manner.
+
+*Follow the project’s coding standards and style.
+
+##### Issues
+
+* If you find a bug, please open an issue with a detailed description.
+
+* If you have ideas for new features, feel free to propose them in issues.
+
+* ✅ Thank you for contributing! Every contribution helps improve the project.
+
 
 ## 9️⃣ Roadmap / Future Improvements
 
