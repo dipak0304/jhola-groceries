@@ -51,7 +51,8 @@ Any suggestion and feedback is welcome. You can message me on
 
 * **Authentication:** ![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=json-web-tokens&logoColor=white)
 
-* **Deployment:** Vercel
+* **Deployment:** ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
+
 
 * ### SELLER LOGIN EMAIL/PASSWORD
 * #### Email:  admin@example.com
