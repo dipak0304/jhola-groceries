@@ -5,9 +5,7 @@
 A Grocery Delivery Web Application built with the MERN stack (MongoDB, Express, React, Node.js). Browse, add to cart, and order groceries online with ease!
 
 
-![developer](https://img.shields.io/badge/Developed%20By%20%3A-Dipak%20Bohara-red)
 
-![Developer](https://img.shields.io/badge/Developer-Dipak%20Bohara-blue)
 
 ![Developer](https://img.shields.io/badge/Developer-Dipak%20Bohara-blue?style=social&logo=github)
 
