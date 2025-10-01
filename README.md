@@ -4,6 +4,8 @@
 
 This is a **Grocery Delivery Web Application** built using the **MERN stack** (MongoDB, Express, React, Node.js). The platform allows users to browse a variety of grocery products, add them to their cart, and place orders for home delivery. It provides an intuitive and responsive user interface, ensuring a seamless shopping experience.
 
+
+![developer](https://img.shields.io/badge/Developed%20By%20%3A-Dipak%20Bohara-red)
 #### **Key Features:**
 
 * **Product Listing:** Browse through available grocery items with images, prices, and descriptions.
