@@ -93,13 +93,13 @@ Thank you for considering contributing to the Jhola Groceries project! We welcom
 
 ##### Clone your fork
 
-git clone https://github.com/your-username/jhola-groceries.git
+git clone https://github.com/dipak0304/jhola-groceries.git
 cd jhola-groceries
 
 
 ##### Create a new branch
 
-git checkout -b feature/your-feature-name
+git checkout -b feature/dipak0304
 
 
 ##### Make changes
