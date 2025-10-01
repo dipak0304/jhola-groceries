@@ -47,7 +47,8 @@ Any suggestion and feedback is welcome. You can message me on
 * **Backend:** ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)  ![Express](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge&logo=express&logoColor=white)
 
 
-* **Database:** MongoDB
+* **Database:** ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+
 * **Authentication:** JWT (JSON Web Tokens)
 * **Deployment:** Vercel
 
