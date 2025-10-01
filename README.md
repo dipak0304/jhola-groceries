@@ -41,7 +41,8 @@ Any suggestion and feedback is welcome. You can message me on
 
 #### **Tech Stack:**
 
-* **Frontend:** ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+* **Frontend:** ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white)
+
 
 * **Backend:** Node.js, Express
 * **Database:** MongoDB
