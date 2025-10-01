@@ -81,3 +81,14 @@ cd ../groceries-client
 npm install
 
 npm run dev
+
+
+## 9️⃣ Roadmap / Future Improvements
+
+* Mobile app version
+
+* Push notifications
+
+* Multi-seller marketplace
+
+* Dark mode, better UI/UX
