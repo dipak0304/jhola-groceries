@@ -27,7 +27,7 @@ Any suggestion and feedback is welcome. You can message me on
 ![cart snap](https://github.com/dipak0304/jhola-groceries/blob/main/pages-img/cart.png?raw=true)
 
 ### Seller Dashboard
-![seller snap](https://github.com/dipak0304/jhola-groceries/blob/main/pages-img/cart.png?raw=true)
+![seller snap](https://github.com/dipak0304/jhola-groceries/blob/main/pages-img/seller.png?raw=true)
 
 
 
