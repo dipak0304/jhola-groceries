@@ -1,6 +1,6 @@
 
 
-🛒 Jhola Grocery Delivery Website
+## 🛒 Jhola Grocery Delivery Website
 
 A Grocery Delivery Web Application built with the MERN stack (MongoDB, Express, React, Node.js). Browse, add to cart, and order groceries online with ease!
 
