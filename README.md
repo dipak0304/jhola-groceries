@@ -48,8 +48,8 @@ Any suggestion and feedback is welcome. You can message me on
 * **Deployment:** Vercel
 
 * ### SELLER LOGIN EMAIL/PASSWORD
-* # Email:  admin@example.com
-* # Password: admin123
+* #### Email:  admin@example.com
+* #### Password: admin123
 * 
 
 #### **Live Links:**
