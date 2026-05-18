@@ -24,13 +24,22 @@ export const sellerLogin = async (req, res) => {
   }
 };
 
-//Seller isAuth :/api/seller/is-auth
+//Seller isAuth :/api/seller/is-auth (always 200 — not logged in is not an error)
 export const isSellerAuth = async (req, res) => {
   try {
-    return res.json({ success: true });
+    const { sellerToken } = req.cookies;
+    if (!sellerToken) {
+      return res.json({ success: false });
+    }
+
+    const tokenDecode = jwt.verify(sellerToken, process.env.JWT_SECRET);
+    if (tokenDecode.email === process.env.SELLER_EMAIL) {
+      return res.json({ success: true });
+    }
+
+    return res.json({ success: false });
   } catch (error) {
-    console.log(error.message);
-    res.json({ success: false, message: error.message });
+    return res.json({ success: false });
   }
 };
 
