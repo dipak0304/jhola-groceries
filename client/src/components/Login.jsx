@@ -1,6 +1,7 @@
 import React from "react";
 import { useAppContext } from "../context/AppContext";
 import toast from "react-hot-toast";
+import { setAuthToken } from "../utils/authToken";
 
 const Login = () => {
   const { setShowUserLogin, setUser, axios, navigate } = useAppContext();
@@ -17,6 +18,7 @@ const Login = () => {
         password,
       });
       if (data.success) {
+        if (data.token) setAuthToken(data.token);
         navigate("/");
         setUser(data.user);
         setShowUserLogin(false);

@@ -3,10 +3,23 @@ import { useNavigate } from "react-router-dom";
 import { dummyProducts } from "../assets/assets";
 import toast from "react-hot-toast";
 import axios from "axios";
+import {
+  clearAuthToken,
+  getAuthToken,
+  setAuthToken,
+} from "../utils/authToken";
+
 axios.defaults.withCredentials = true;
-// Use same-origin /api (Vercel rewrite + Vite proxy). Do not point at the backend URL in production.
 const backendUrl = import.meta.env.VITE_BACKEND_URL?.trim();
 axios.defaults.baseURL = backendUrl || "";
+
+axios.interceptors.request.use((config) => {
+  const token = getAuthToken();
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
+  return config;
+});
 
 export const AppContext = createContext();
 
@@ -40,10 +53,16 @@ export const AppContextProvider = ({ children }) => {
       const { data } = await axios.get("/api/user/is-auth");
       if (data.success) {
         setUser(data.user);
-        setCartItems(data.user.cartItems);
+        setCartItems(data.user.cartItems || {});
+      } else {
+        clearAuthToken();
+        setUser(null);
       }
     } catch (error) {
-      setUser(null);
+      if (error.response?.status === 401) {
+        clearAuthToken();
+        setUser(null);
+      }
     }
   };
 

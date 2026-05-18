@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import { assets } from "../assets/assets";
 import { useAppContext } from "../context/AppContext";
 import toast from "react-hot-toast";
+import { clearAuthToken } from "../utils/authToken";
 
 const Navbar = () => {
   const [open, setOpen] = React.useState(false);
@@ -20,6 +21,7 @@ const Navbar = () => {
     try {
       const { data } = await axios.get("/api/user/logout");
       if (data.success) {
+        clearAuthToken();
         toast.success(data.message);
         setUser(null);
         navigate("/");

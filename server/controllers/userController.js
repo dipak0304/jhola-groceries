@@ -24,6 +24,7 @@ export const register = async (req, res) => {
     res.cookie("token", token, getAuthCookieOptions());
     return res.json({
       success: true,
+      token,
       user: { _id: user._id, email: user.email, name: user.name },
     });
   } catch (error) {
@@ -56,6 +57,7 @@ export const login = async (req, res) => {
     res.cookie("token", token, getAuthCookieOptions());
     return res.json({
       success: true,
+      token,
       user: { _id: user._id, email: user.email, name: user.name },
     });
   } catch (error) {
