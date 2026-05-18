@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useAppContext } from "../../context/AppContext";
 import toast from "react-hot-toast";
+import { setSellerAuthToken } from "../../utils/sellerAuthToken";
 
 const SellerLogin = () => {
   const { isSeller, setIsSeller, navigate, axios } = useAppContext();
@@ -15,6 +16,7 @@ const SellerLogin = () => {
         password,
       });
       if (data.success) {
+        if (data.token) setSellerAuthToken(data.token);
         setIsSeller(true);
         navigate("/seller");
       } else {

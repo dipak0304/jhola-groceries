@@ -4,8 +4,10 @@ import { assets } from "../../assets/assets";
 import { useAppContext } from "../../context/AppContext";
 import toast from "react-hot-toast";
 
+import { clearSellerAuthToken } from "../../utils/sellerAuthToken";
+
 const SellerLayout = () => {
-  const { axios, navigate } = useAppContext();
+  const { axios, navigate, setIsSeller } = useAppContext();
 
   const sidebarLinks = [
     { name: "Add Product", path: "/seller", icon: assets.add_icon },
@@ -21,8 +23,9 @@ const SellerLayout = () => {
     try {
       const { data } = await axios.get("/api/seller/logout");
       if (data.success) {
+        clearSellerAuthToken();
+        setIsSeller(false);
         toast.success(data.message);
-
         navigate("/");
       } else {
         toast.error(data.message);

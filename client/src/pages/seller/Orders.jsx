@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useAppContext } from "../../context/AppContext";
-import { assets, dummyOrders } from "../../assets/assets";
+import { assets } from "../../assets/assets";
+import toast from "react-hot-toast";
 
 const Orders = () => {
-  const { currency, axios } = useAppContext();
+  const { currency, axios, navigate } = useAppContext();
   const [orders, setOrders] = useState([]);
   const fetchOrders = async () => {
     try {
@@ -14,7 +15,12 @@ const Orders = () => {
         toast.error(data.message);
       }
     } catch (error) {
-      toast.error(error.message);
+      const message =
+        error.response?.data?.message || error.message || "Failed to load orders";
+      toast.error(message);
+      if (error.response?.status === 403) {
+        navigate("/seller");
+      }
     }
   };
   useEffect(() => {

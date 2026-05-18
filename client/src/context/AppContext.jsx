@@ -6,18 +6,34 @@ import axios from "axios";
 import {
   clearAuthToken,
   getAuthToken,
-  setAuthToken,
 } from "../utils/authToken";
+import { getSellerAuthToken } from "../utils/sellerAuthToken";
 
 axios.defaults.withCredentials = true;
 const backendUrl = import.meta.env.VITE_BACKEND_URL?.trim();
 axios.defaults.baseURL = backendUrl || "";
 
+const isSellerApiRequest = (url = "") =>
+  url.includes("/api/seller") ||
+  url.includes("/api/order/seller") ||
+  url.includes("/api/product/add") ||
+  url.includes("/api/product/stock");
+
 axios.interceptors.request.use((config) => {
-  const token = getAuthToken();
-  if (token) {
-    config.headers.Authorization = `Bearer ${token}`;
+  const url = config.url || "";
+
+  if (isSellerApiRequest(url)) {
+    const sellerToken = getSellerAuthToken();
+    if (sellerToken) {
+      config.headers["X-Seller-Token"] = sellerToken;
+    }
+  } else {
+    const token = getAuthToken();
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
   }
+
   return config;
 });
 
@@ -37,11 +53,7 @@ export const AppContextProvider = ({ children }) => {
   const fetchSeller = async () => {
     try {
       const { data } = await axios.get("/api/seller/is-auth");
-      if (data.success) {
-        setIsSeller(true);
-      } else {
-        setIsSeller(false);
-      }
+      setIsSeller(!!data.success);
     } catch (error) {
       setIsSeller(false);
     }

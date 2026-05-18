@@ -1,5 +1,6 @@
 import jwt from "jsonwebtoken";
 import { getAuthCookieOptions } from "../utils/authCookie.js";
+import { getSellerTokenFromRequest } from "../utils/getSellerTokenFromRequest.js";
 //Login Seller :/api/seller/login
 
 export const sellerLogin = async (req, res) => {
@@ -14,7 +15,7 @@ export const sellerLogin = async (req, res) => {
         expiresIn: "7d",
       });
       res.cookie("sellerToken", token, getAuthCookieOptions());
-      return res.json({ success: true, message: "Logged In" });
+      return res.json({ success: true, token, message: "Logged In" });
     } else {
       return res.json({ success: false, message: "Invalid Credentials" });
     }
@@ -27,7 +28,7 @@ export const sellerLogin = async (req, res) => {
 //Seller isAuth :/api/seller/is-auth (always 200 — not logged in is not an error)
 export const isSellerAuth = async (req, res) => {
   try {
-    const { sellerToken } = req.cookies;
+    const sellerToken = getSellerTokenFromRequest(req);
     if (!sellerToken) {
       return res.json({ success: false });
     }
