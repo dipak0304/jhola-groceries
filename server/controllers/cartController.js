@@ -10,17 +10,16 @@ import User from "../models/User.js";
  */
 export const updateCart = async (req, res) => {
   try {
-    const { userId, cartItems } = req.body;
+    const { cartItems } = req.body;
+    const userId = req.userId;
 
-    // Validate input
-    if (!userId || !cartItems || typeof cartItems !== "object") {
+    if (!cartItems || typeof cartItems !== "object") {
       return res.status(400).json({
         success: false,
-        message: "Invalid request. userId and cartItems are required.",
+        message: "Invalid request. cartItems is required.",
       });
     }
 
-    // Find user and update cart
     const updatedUser = await User.findByIdAndUpdate(
       userId,
       { $set: { cartItems } }, // safely update only cartItems

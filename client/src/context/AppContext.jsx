@@ -4,7 +4,9 @@ import { dummyProducts } from "../assets/assets";
 import toast from "react-hot-toast";
 import axios from "axios";
 axios.defaults.withCredentials = true;
-axios.defaults.baseURL = import.meta.env.VITE_BACKEND_URL;
+// Use same-origin /api (Vercel rewrite + Vite proxy). Do not point at the backend URL in production.
+const backendUrl = import.meta.env.VITE_BACKEND_URL?.trim();
+axios.defaults.baseURL = backendUrl || "";
 
 export const AppContext = createContext();
 
@@ -116,25 +118,24 @@ export const AppContextProvider = ({ children }) => {
     fetchProducts();
   }, []);
 
- useEffect(() => {
-  const updateCart = async () => {
-    try {
-      const { data } = await axios.post('/api/cart/update', {
-        userId: user._id, // send userId
-        cartItems
-      });
-      if (!data.success) {
-        toast.error(data.message);
-      }
-    } catch (error) {
-      toast.error(error.message);
-    }
-  }
+  useEffect(() => {
+    if (!user?._id) return;
 
-  if (user) {
+    const updateCart = async () => {
+      try {
+        const { data } = await axios.post("/api/cart/update", { cartItems });
+        if (!data.success) {
+          toast.error(data.message);
+        }
+      } catch (error) {
+        if (error.response?.status !== 401) {
+          toast.error(error.message);
+        }
+      }
+    };
+
     updateCart();
-  }
-}, [cartItems, user]);
+  }, [cartItems, user]);
 
 
   const value = {
